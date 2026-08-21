@@ -5,7 +5,14 @@ require("dotenv").config();
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://apoudel.dev",
+      "https://www.apoudel.dev",
+    ],
+  })
+);
 app.use(express.json());
 
 app.post("/api/contact", async (req, res) => {
