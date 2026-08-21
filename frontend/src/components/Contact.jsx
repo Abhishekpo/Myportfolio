@@ -22,13 +22,16 @@ function Contact() {
     setStatus("Sending...");
 
     try {
-      const response = await fetch("https://myportfolio-s87x.onrender.com/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/contact`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await response.json();
 
@@ -55,8 +58,8 @@ function Contact() {
         <h2>Get In Touch</h2>
 
         <span>
-          Have a software engineering opportunity, project idea, or just want
-          to connect? Feel free to send me a message.
+          Have a software engineering opportunity, project idea, or just want to
+          connect? Feel free to send me a message.
         </span>
       </div>
 
