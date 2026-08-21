@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #f8fafc;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(59, 130, 246, 0.35),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(168, 85, 247, 0.3),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #0f172a,
+      #172554,
+      #2e1065
+    );
+
+  background-attachment: fixed;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+section {
+  scroll-margin-top: 90px;
+}
+
+::selection {
+  background: #38bdf8;
+  color: #0f172a;
+}
